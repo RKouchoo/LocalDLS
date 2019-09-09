@@ -10,10 +10,7 @@ public class Main {
 	private static Session session;
 	
 	public static void main(String[] args) {
-		
-		/*
-		 * Initialise the SSH session to deploy the target json and code.
-		 */
+	/*	
 		
 		javaSSH = new JSch(); // create and configure ssh library
 		try {
@@ -25,10 +22,12 @@ public class Main {
 		}
 
 		
-		// Prepare and load the latest json file.
+		// Prepare and load the latest json file which was written.
+		*/
 		
-		
-		
+		System.out.println("File Chooser running");
+		FileChooser chooser = new FileChooser();
+		chooser.createAndShowGUI();
 		
 	}
 
