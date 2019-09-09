@@ -9,8 +9,7 @@ public class Main {
 	private static JSch javaSSH;
 	private static Session session;
 	
-	public static void main(String[] args) {
-	/*	
+	public static void main(String[] args) {	
 		
 		javaSSH = new JSch(); // create and configure ssh library
 		try {
@@ -20,14 +19,13 @@ public class Main {
 		} catch (JSchException e) { // grab the error
 			e.printStackTrace(); // send exception to the console, will be a strange error if this fails
 		}
-
-		
-		// Prepare and load the latest json file which was written.
-		*/
+	
+		// Prepare and load the latest json file which was written.		
 		
 		System.out.println("File Chooser running");
-		FileChooser chooser = new FileChooser();
-		chooser.createAndShowGUI();
+		FileChooser.createAndShowGUI();
+		
+		
 		
 	}
 
