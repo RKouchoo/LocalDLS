@@ -32,4 +32,9 @@ public class CommandSchedulerFilter {
 	public void stopExternalCommandThread() {
 		
 	}
+	
+	public String getExternalCommandThreadStatus() {
+		return null;
+	}
+	
 }
