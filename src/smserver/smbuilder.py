@@ -8,8 +8,10 @@ import ccache
 # load, add, remove
 commands = ["l", "a", "r"]
 
-
 command = input("Please specify a command: ")
+
+# check the config and set the cache file name incase backups were made etc
+ucache = "//user//" + checkConfig()
 
 
 while(True):
@@ -26,6 +28,16 @@ while(True):
 	if command not in commands:
 		print("Please specify a valid command!")
 		command = input("Please specify a command: ")
+
+
+
+def checkConfig():
+	cacheName = ""
+	with open("settings.cini", "r") as settings:
+		settings.readline() # skip the first line since its just a descriptor, this should be put in a different class but whatever
+		meme = settings.readline()
+
+	return cacheName
 
 
 # returns the yaml of the currentusercache
