@@ -1,0 +1,1 @@
+# Class that loads and updates an SMList
