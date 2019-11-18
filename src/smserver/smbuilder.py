@@ -2,8 +2,25 @@
 
 import yaml 
 import os
+import requests
+
+from beautifulsoup import bs4
+from selenium import webdriver
 
 import ccache
+
+
+# options for the chrome window
+chromeOptions = webdriver.chromeOptions()
+chromeOptions.add_argument("--headless") # show/hide chrome
+chromeOptions.add_argument("--log-level=3") # filter console spam
+chromeOptions.add_argument("--silent")
+chromeOptions.add_argument("--disable-notifcations")
+chromeOptions.add_argument("--mute-audio")
+
+# create a driver with the options and also give it a null log path
+driver = webdriver.Chrome(chromeoptions=chromeOptions, service_log_path=os.path.devnull)
+
 
 # load, add, remove
 commands = ["l", "a", "r"]
@@ -51,5 +68,12 @@ def save(name, sm):
 
 	with open(filename, "w+") as textFile:
 		textFile.write(fileData)
+
+
+# returns an sm list from a base url
+# needs lots of tuning etc 
+def createSMList(base):
+
+
 
 
